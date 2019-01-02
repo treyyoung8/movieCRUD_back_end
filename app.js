@@ -10,8 +10,4 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use('/movies', movies)
 
-app.get('/', (req, res) => {
-    res.send('hey')
-})
-
 app.listen(port, console.log(`yo ${port}`))
