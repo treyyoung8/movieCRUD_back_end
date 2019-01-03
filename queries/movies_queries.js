@@ -5,7 +5,7 @@ module.exports = {
         return db('movies')
     },
     getMovieById(id) {
-        return db('movies').where('id', id)
+        return db('movies').where('id', id).then(movie => movie[0])
     },
     createMovie(newMovie) {
         return db('movies').insert(newMovie).returning('*')

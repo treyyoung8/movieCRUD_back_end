@@ -7,7 +7,7 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/:id', (req, res, next) => {
-    queries.getMovieById(req.params.id).then(movie => res.status(200).send({ movie }))
+    queries.getMovieById(req.params.id).then(movie => res.status(200).send(movie))
 })
 
 router.post('/', (req, res, next) => {
